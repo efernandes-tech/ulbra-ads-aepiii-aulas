@@ -1,0 +1,43 @@
+# Project: Atividades
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = G1-Ex1.o G1-Ex3.o G1-Ex4.o G1-Ex5.o G1-Ex7.o principal.o
+LINKOBJ  = G1-Ex1.o G1-Ex3.o G1-Ex4.o G1-Ex5.o G1-Ex7.o principal.o
+LIBS     = -L"C:/Tools/Dev-Cpp/MinGW64/lib" -L"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+CXXINCS  = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+BIN      = Atividades.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+G1-Ex1.o: G1-Ex1.cpp
+	$(CPP) -c G1-Ex1.cpp -o G1-Ex1.o $(CXXFLAGS)
+
+G1-Ex3.o: G1-Ex3.cpp
+	$(CPP) -c G1-Ex3.cpp -o G1-Ex3.o $(CXXFLAGS)
+
+G1-Ex4.o: G1-Ex4.cpp
+	$(CPP) -c G1-Ex4.cpp -o G1-Ex4.o $(CXXFLAGS)
+
+G1-Ex5.o: G1-Ex5.cpp
+	$(CPP) -c G1-Ex5.cpp -o G1-Ex5.o $(CXXFLAGS)
+
+G1-Ex7.o: G1-Ex7.cpp
+	$(CPP) -c G1-Ex7.cpp -o G1-Ex7.o $(CXXFLAGS)
+
+principal.o: principal.cpp
+	$(CPP) -c principal.cpp -o principal.o $(CXXFLAGS)
