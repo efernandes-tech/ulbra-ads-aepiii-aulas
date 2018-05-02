@@ -1,0 +1,41 @@
+# Project: AtividadeBibliotecaEstatica
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = G1-Ex1.o G1-Ex3.o G1-Ex4.o G1-Ex5.o G1-Ex7.o
+LINKOBJ  = G1-Ex1.o G1-Ex3.o G1-Ex4.o G1-Ex5.o G1-Ex7.o
+LIBS     = -L"C:/Tools/Dev-Cpp/MinGW64/lib" -L"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+CXXINCS  = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+BIN      = AtivBibliotecaEstatica.a
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	ar r $(BIN) $(LINKOBJ)
+	ranlib $(BIN)
+
+G1-Ex1.o: G1-Ex1.cpp
+	$(CC) -c G1-Ex1.cpp -o G1-Ex1.o $(CFLAGS)
+
+G1-Ex3.o: G1-Ex3.cpp
+	$(CC) -c G1-Ex3.cpp -o G1-Ex3.o $(CFLAGS)
+
+G1-Ex4.o: G1-Ex4.cpp
+	$(CC) -c G1-Ex4.cpp -o G1-Ex4.o $(CFLAGS)
+
+G1-Ex5.o: G1-Ex5.cpp
+	$(CC) -c G1-Ex5.cpp -o G1-Ex5.o $(CFLAGS)
+
+G1-Ex7.o: G1-Ex7.cpp
+	$(CC) -c G1-Ex7.cpp -o G1-Ex7.o $(CFLAGS)

@@ -1,0 +1,28 @@
+# Project: LendoAtivBibliotecaEstatica
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = principal.o
+LINKOBJ  = principal.o
+LIBS     = -L"C:/Tools/Dev-Cpp/MinGW64/lib" -L"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc AtivBibliotecaEstatica.a
+INCS     = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+CXXINCS  = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+BIN      = LendoAtivBibliotecaEstatica.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+principal.o: principal.cpp
+	$(CC) -c principal.cpp -o principal.o $(CFLAGS)
