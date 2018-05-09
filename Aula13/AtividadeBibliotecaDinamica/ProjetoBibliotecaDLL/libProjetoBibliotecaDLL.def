@@ -1,0 +1,8 @@
+; dlltool --base-file C:\Users\Aluno\AppData\Local\Temp/cca02116.base --output-exp ProjetoBibliotecaDLL.exp --dllname ProjetoBibliotecaDLL.dll --output-def libProjetoBibliotecaDLL.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\Users\Aluno\AppData\Local\Temp/cca02116.def --output-lib libProjetoBibliotecaDLL.a
+EXPORTS
+	exercicio1 @ 1
+	exercicio3 @ 2
+	exercicio4 @ 3
+	exercicio5 @ 4
+	exercicio7 @ 5
+	HelloWorld @ 6
