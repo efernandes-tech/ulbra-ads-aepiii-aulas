@@ -2,6 +2,7 @@
 
 int main() {
 	int primeiro, segundo;
+
 	printf("Informe primeiro numero: \n ");
 	fflush(stdin);
 	scanf("%d", &primeiro);
