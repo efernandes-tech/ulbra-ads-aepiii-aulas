@@ -1,2 +1,6 @@
 # ulbra-ads-aepiii-aulas
-Exemplos e exercícios da disciplina de algoritmos II do curso de análise e desenvolvimento de sistemas na ulbra canoas-rs 2018/1.
+
+- Exemplos e Exercícios;
+- Disciplina de Algoritmos II;
+- Curso de Análise e Desenvolvimento de Sistemas;
+- ULBRA Canoas-RS 2018/1;
